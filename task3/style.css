@@ -14,7 +14,7 @@ A {
 }
 
 .facebook:hover {
-    color: dodgerblue;
+    color: rgb(30, 101, 255);
 }
 
 .youtube:hover {
@@ -22,7 +22,11 @@ A {
 }
 
 .instagram:hover {
-    color: rgb(99, 0, 61);
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .pinterest:hover {
