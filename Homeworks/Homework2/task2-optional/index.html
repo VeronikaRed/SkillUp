@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form name="quizSecond" method="post" action="Hello.php">
+
+        <div class="survey">
+
+            <header>
+                <h4>The World of Fruit</h4>
+            </header>
+
+            <h4>Fruit Survey</h4>
+            <div class="first">
+                <div>
+                    <label>Name <input required type="text" name="name"></label>
+                </div>
+                <div>
+                    <label>Address <input required type="text" name="address"></label>
+                </div>
+                <div>
+                    <label>Email <input required type="text" name="emai"></label>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="question">How many pieces of fruit do you eat per day?</div>
+                <div class="answer">
+                    <div><label><input required type="radio" name="pieces_fruit">0</label></div>
+                    <div><label><input type="radio" name="pieces_fruit">1</label></div>
+                    <div><label><input type="radio" name="pieces_fruit">2</label></div>
+                    <div><label><input type="radio" name="pieces_fruit">More than 2</label></div>
+                </div>
+
+                <div class="question">My favorite fruit</div>
+                <div class="answer">
+                    <select required class="fruit_scroll" multiple name="select" size="4">
+                        <option value="s1">Apple</option>
+                        <option value="s2">Banana</option>
+                        <option value="s3">Plum</option>
+                        <option value="s4">Pomegranate</option>
+                        <option value="s5">Orange</option>
+                        <option value="s6">Srawberry</option>
+                    </select>
+                </div>
+
+                <div class="question"><label for="brochure">Would you like a brochure?</label></div>
+                <div class="answer"><input type="checkbox" id="brochure"></div>
+            </div>
+
+            <div id="finish"><input type="submit" value="Submit"></div>
+
+
+        </div>
+
+    </form>
+
+</body>
+
+</html>

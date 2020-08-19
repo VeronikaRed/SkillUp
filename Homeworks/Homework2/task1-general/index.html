@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Ключевые слова</h1>
+    <ol type="I">
+        <li>
+            <b>A</b>
+            <ul>
+                <li><a href="">abstract</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <b>B</b>
+            <ul>
+                <li><a href="">boolean</a></li>
+                <li><a href="">break</a></li>
+                <li><a href="">byte</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <b>C</b>
+            <ul>
+                <li><a href="">case</a></li>
+                <li><a href="">catch</a></li>
+                <li><a href="">char</a></li>
+                <li><a href="">class</a></li>
+                <li><a href="">const</a></li>
+                <li><a href="">continue</a></li>
+            </ul>
+        </li>
+    </ol>
+    
+    <table>
+        <tr>
+            <th rowspan="2">Browser</th>
+            <th colspan="2">Visitors</th>
+        </tr>
+        <tr>
+            <th>Number</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>Mozilla Firefox</td>
+            <td>163</td>
+            <td>59%</td>
+        </tr>
+        <tr>
+            <td>Google Chrome</td>
+            <td>78</td>
+            <td>28%</td>
+        </tr>
+        <tr>
+            <td>Safari</td>
+            <td>35</td>
+            <td>13%</td>
+        </tr>
+    </table>
+
+    <p>
+        <form name="quiz" method="post" action="Hello.php">
+            <table>
+                <tr>
+                    <th class="article">Name</th>
+                    <th class="article">Value</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>
+                        <div><label><input type="radio" name="sex">Male</label></div>
+                        <div><label><input type="radio" name="sex">Female</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eye color</td>
+                    <td><select name="select">
+                            <option value="s1">green</option>
+                            <option value="s2">blue</option>
+                            <option value="s3">brown</option>
+                            <option value="s4">black</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Check all that apply</td>
+                    <td>
+                        <div><label><input type="checkbox" name="scales">Over 6 feet tall</label></div>
+                        <div><label><input type="checkbox" name="scales">Over 200 pounds</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Describe your athletic ability:<div>
+                        <textarea name="comment" cols="40" rows="4"></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center"><input type="submit" value="Enter my information"></td>
+                </tr>
+
+            </table>
+        </form>
+</body>
+
+</html>

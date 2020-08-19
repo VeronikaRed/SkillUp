@@ -1,0 +1,53 @@
+.survey {
+    width: 600px;
+    height: 550px;
+    background-color: navajowhite;
+    position: relative;
+    line-height: 30px;
+}
+
+header {
+    width: 600px;
+    background-color: darkorange;
+    text-align: center;
+}
+
+.first {
+    position: relative;
+    top: 10px;
+    right: 250px;
+    text-align: right;
+    padding: 0px;
+}
+
+.section {
+    margin-top: 20px;
+    display: inline-block;
+    width: 300px;
+}
+
+.question {
+    display: inherit;
+    width: 160px;
+    line-height: 20px;
+    float: left;
+    text-align: right;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.answer {
+    display: inherit;
+    float: left;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+
+h4 {
+    text-align: center;
+}
+
+#finish {
+    text-align: center;
+}

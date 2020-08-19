@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.4em;
+    letter-spacing: 0.05em;
+    text-align: justify;
+    color: darkgreen;
+}
+
+A {
+    color: gray;
+    font-size: 3em;
+}
+
+.facebook:hover {
+    color: rgb(30, 101, 255);
+}
+
+.youtube:hover {
+    color: red;
+}
+
+.instagram:hover {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.pinterest:hover {
+    color: palevioletred;
+}

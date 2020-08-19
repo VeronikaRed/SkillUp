@@ -1,0 +1,19 @@
+div{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+div::after{
+    content: close-quote;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    color: lawngreen;
+}
+
+div::before{
+    content: open-quote;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    color: lightcoral;
+}
