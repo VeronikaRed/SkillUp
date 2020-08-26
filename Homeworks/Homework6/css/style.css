@@ -12,11 +12,10 @@ header {
 }
 
 h1 {
-    font-weight: 500;
     font-size: 36px;
     line-height: 48px;
     color: #091133;
-    font-weight: 500;
+    font-weight: bolder;
 }
 
 header p {
@@ -27,7 +26,7 @@ header p {
     margin-bottom: 80px;
 }
 
-main {
+nav {
     position: relative;
     display: inline-block;
 }
@@ -39,14 +38,14 @@ main {
 }
 
 H2 {
-    font-weight: 500;
+    font-weight: bold;
     font-size: 36px;
     line-height: 48px;
     color: #37447E;
 }
 
 H3 {
-    font-weight: 500;
+    font-weight: bold;
     font-size: 22px;
     line-height: 32px;
     color: #091133;

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+    background-image: url(/img/Layer15.png);
+    background-size: cover;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-repeat: no-repeat;
+}
+
+.personal {
+    display: inline-block;
+    margin-top: 150px;
+}
+
+.person {
+    display: inherit;
+    width: 250px;
+    margin: 0px 50px;
+}
+
+H1 {
+    font-weight: 1000;
+    font-size: 48px;
+    margin-top: 100px;
+}
+
+p {
+    color: rgba(189, 179, 179, 0.7);
+}
+
+#subtitle {
+    width: 700px;
+    margin: 0 auto;
+}
+
+#click {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right, #49007c, #b30084);
+    color: rgb(226, 226, 226);
+    margin-top: 120px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
