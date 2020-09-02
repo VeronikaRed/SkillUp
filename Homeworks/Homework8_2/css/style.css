@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-main {
-    width: 1440px;
-    height: 1300px;
-    column-count: 2;
-    margin: 0 auto;
+.wrapper{
     font-family: 'Open Sans', sans-serif;
-    background-color: rgb(248, 248, 248);
+    max-width: 1440px;
+    display: grid;
+    grid-template: auto auto;
+    grid-template-areas: "main";
 }
 
+.grid_main{
+    grid-area: main;
+}
+
+.main_content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(660px, 1fr));
+    grid-template-rows:auto;
+    background-color: rgb(248, 248, 248);
+    justify-items: center
+}
 
 .card_first {
-    display: inline-block;
     width: 660px;
     height: 184px;
     margin: 32px 30px;
@@ -31,7 +40,6 @@ main {
 }
 
 .picture_area_bask {
-
     margin: 16px 50px 0 0;
 }
 
@@ -61,4 +69,35 @@ time {
     font-size: 32px;
     margin-left: 40px;
     font-weight: 700;
+}
+
+.first_order{
+    order: 1;
+}
+.second_order{
+    order: 3;
+}
+.third_order{
+    order: 5;
+}
+.fourth_order{
+    order: 7;
+}
+.fifth_order{
+    order: 9;
+}
+.sixth_order{
+    order: 2;
+}
+.seventh_order{
+    order: 4;
+}
+.eighth_order{
+    order: 6;
+}
+.ninth_order{
+    order: 8;
+}
+.tenth_order{
+    order: 10;
 }

@@ -10,12 +10,9 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
     min-height: 100%;
-    background-color: rgb(145, 92, 24);
     justify-content: center;
     position: relative;
 }
-
-
 
 .wrapper_block {
     display: flex;
@@ -27,7 +24,7 @@ body {
 
 .header {
     position: fixed;
-    background-color: rgb(255, 201, 130);
+    background-color: rgb(255, 237, 214);
     width: 1440px;
     z-index: 9;
 }
@@ -77,7 +74,7 @@ A {
     position: relative;
     top: 120px;
     padding-left: 120px;
-    background-color: rgb(255, 179, 217);
+    background-color: rgb(243, 243, 243);
     display: flex;
     flex-direction: column;
 }
@@ -87,82 +84,141 @@ A {
     margin-bottom: 130px;
     align-items: center
 }
-.flex_article1{
-padding-right: 200px
+
+.flex_article1 {
+    padding-right: 200px
 }
 
-.first_article{
-position: relative;
+.first_article {
+    position: relative;
 }
 
-.poster_1{
+.poster_1 {
     position: absolute;
 }
+
 .pause {
     position: absolute;
     width: 70px;
     height: 70px;
-    top: 620px;
-    left: 52%;
+    top: 630px;
+    left: 53%;
     background-color: white;
     z-index: 7;
 }
-.play{
+
+.pause_2 {
+    top: 40%;
+    left: 40%;
+}
+
+.play {
     position: absolute;
-    top: 645px;
-    left: 54%;
+    top: 660px;
+    left: 55%;
     z-index: 8;
 }
 
-.poster_video{
+.play_2 {
+    top: 46%;
+    left: 48%;
+}
+
+.poster_video {
     position: absolute;
     top: 500px;
-    left: 40%;
+    left: 35%;
     z-index: 6;
 }
 
-.header_article2{
-display: flex;
-padding: 30px 124px 40px 0;
-
+.header_article2 {
+    position: relative;
+    display: flex;
+    padding: 30px 124px 40px 0;
+    justify-content: space-around;
 }
 
-.list_article2{
+.list_article2 {
     column-count: 2;
-column-gap: 100px
+    column-gap: 100px
 }
 
-.item_article2{
-max-width: 550px;
-padding-right: 160px;
-}
-#img_article_2{
-padding: 0 70px 0px 40px;
+.item_article2 {
+    max-width: 550px;
+    padding-right: 160px;
 }
 
+.article3_item {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.body_article3 {
+    display: flex;
+    flex-direction: column;
+}
 
+.item_article3 {
+    margin: 20px;
+}
 
-h1 {
+#specific_item_art3 {
+    margin-top: 0px;
+    position: relative;
+}
+
+.body_article3_item {
+    display: flex;
+}
+
+#img_article2 {
+    padding: 0 70px 0px 40px;
+}
+
+#img_article2_1 {
+    margin: -30px 0 0 -120px;
+}
+
+#img_article2_2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.article2_position {
+    padding: 0 130px 150px 130px
+}
+
+.content_article3 {
+    display: flex;
+    flex-basis: 50%;
+    margin-right: 150px;
+    justify-content: space-around;
+}
+
+.item_content_article3 {
+    width: 750px;
+}
+
+.article4_body {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 150px;
+    margin: 0 120px 100px 0;
+}
+
+.marg {
+    margin-bottom: 70px;
+}
+
+h5 {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 4px;
     opacity: 0.7;
     margin: 0;
-}
-
-H4 {
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 50px;
-    letter-spacing: -1px;
-    margin: 0px;
-}
-
-H3 {
-    padding: 0px;
-    margin: 0px;
 }
 
 h2 {
@@ -172,6 +228,19 @@ h2 {
     line-height: 70px;
     letter-spacing: -1px;
     color: black;
+}
+
+H3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+H4 {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -1px;
+    margin: 0px;
 }
 
 h6 {
@@ -187,6 +256,7 @@ p {
     opacity: 0.7;
     color: black;
 }
+
 .footer {
     background-color: rgb(214, 252, 183);
 }
@@ -237,7 +307,6 @@ p {
     height: 44px;
     border: 1px solid #515151;
     background: #C6B393;
-
 }
 
 .footer_nav {
@@ -266,7 +335,7 @@ p {
 
 button {
     display: inline-block;
-    width: 189px;
+    width: 200px;
     height: 50px;
     background-color: rgb(132, 26, 231);
     color: white;
@@ -276,7 +345,7 @@ button {
     letter-spacing: 4px;
     border: 1px solid rgb(132, 26, 231);
     margin-bottom: 200px;
-    margin-top: 56px;
+    margin-top: 28px;
 }
 
 .line_in_start {
@@ -302,27 +371,36 @@ button {
     margin: 80px 0 0 0;
 }
 
-#detales {
+.details {
     margin: 0px;
     padding: 0px;
 }
 
-.chevron{
-
+.chevron {
     background-color: rgb(163, 163, 163);
     opacity: 0.8;
     padding: 25px;
     margin-left: 20px
-
 }
-.arrows{
+
+.arrows {
     margin: 50px 0 180px 0;
 }
-#chevron_1{
+
+.chevron_1 {
     transform: rotate(-90deg);
     color: white;
 }
-#chevron_2{
+
+.chevron_2 {
     transform: rotate(90deg);
     color: white;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: rgb(204, 204, 204);
+}
+#shadow{
+    box-shadow: 20px 20px 10px 1px rgba(0, 0, 0, 0.2);
 }
