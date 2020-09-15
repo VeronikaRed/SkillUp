@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
 .container {
-    width: 1440px;
+    max-width: 1440px;
     position: relative;
     font-family: 'Roboto', sans-serif;
-    margin: 140px 165px 0px 165px;
+    margin: 140px 0px 0px 165px;
 }
 
 header {
     position: relative;
+    width: inherit;
 }
 
 h1 {
