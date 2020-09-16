@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&display=swap');
 
 body {
-    margin: 0px;
+    margin: 0px auto;
     font-family: 'Fira Sans', sans-serif;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .wrapper {
-    width: 1440px;
+    width: inherit;
     margin: 0 auto;
     box-sizing: border-box;
     min-height: 100%;
@@ -27,6 +29,8 @@ body {
     background-color: rgb(255, 237, 214);
     width: 1440px;
     z-index: 9;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .header_block {
@@ -35,10 +39,12 @@ body {
     padding: 0 50px;
     align-items: center;
     height: 140px;
+    width: 100%;
 }
 
 .dropdown {
     position: relative;
+    right: 120px;
     display: inline-block;
 }
 
@@ -173,7 +179,7 @@ A {
 }
 
 #img_article2 {
-    padding: 0 70px 0px 40px;
+    padding: 0 40px 0px 10px;
 }
 
 #img_article2_1 {
