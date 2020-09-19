@@ -11,15 +11,7 @@ $dark-color:rgb(14, 26, 53);
     align-items: center;
 }
 
-@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
-    $k: ($f-max - $f-min)/($v-max - $v-min);
-    $b: $f-min - $k * $v-min;
-    $b: $b * 1px;
-  
-    @return calc( #{$k} * 100vw + #{$b} );
-}
-
-@function calcFluidLineSize($f-min, $f-max, $v-min, $v-max) {
+@function calcFluidSize($f-min, $f-max, $v-min, $v-max) {
     $k: ($f-max - $f-min)/($v-max - $v-min);
     $b: $f-min - $k * $v-min;
     $b: $b * 1px;
@@ -101,7 +93,7 @@ $dark-color:rgb(14, 26, 53);
 }
 
 h2 {
-    font-size: calcFluidFontSize(32, 60, 360, 1940);
+    font-size: calcFluidSize(32, 60, 360, 1940);
     color: $dark-color;
     line-height: 0.24;
     margin: 70px 0 40px 0;
@@ -130,7 +122,7 @@ h2 {
     &:before,
     &:after {
         content: ' ';
-        width: calcFluidLineSize(5, 350, 360, 1940);
+        width: calcFluidSize(5, 350, 360, 1940);
         height: 1.5px;
         margin: 0 20px;
         vertical-align: super;
