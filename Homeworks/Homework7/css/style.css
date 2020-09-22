@@ -27,7 +27,6 @@ body {
 .header {
     position: fixed;
     background-color: rgb(255, 237, 214);
-    width: 1440px;
     z-index: 9;
     max-width: 1440px;
     width: 100%;
@@ -167,6 +166,8 @@ A {
 
 .item_article3 {
     margin: 20px;
+    width: 30%;
+    height: auto;
 }
 
 #specific_item_art3 {
