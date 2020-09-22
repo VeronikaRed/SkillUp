@@ -21,18 +21,17 @@ $dark-color:rgb(14, 26, 53);
 
 .article {
     @include position-flex-column;
-    width: 100vw;
     min-height: 100vh;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    max-width: 1940px; 
+    width: 100%;
 }
 
 .box {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100vw;
+    width: inherit;
     margin: 20px;
 }
 
