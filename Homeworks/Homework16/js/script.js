@@ -1,8 +1,5 @@
-// 1. Если переменная больше нуля и меньше 5-ти, то выведите "Верно", в противном случае 
-// выведите "Неверно".
-let numberRandom = function (min, max) {
-    return Math.floor(Math.random() * (max - min +1)) + min;
-}
+/* 1. If the variable is greater than zero and less than 5, then output "True", otherwise
+print "Wrong".*/
 function getCheck(number){
     console.log(number);
     if (number>0 && number<5){
@@ -11,11 +8,14 @@ function getCheck(number){
         console.log("Wrong");
     }
 }
+let numberRandom = function (min, max) {
+    return Math.floor(Math.random() * (max - min +1)) + min;
+};
 getCheck(numberRandom(1,10));
 
-// 2. Переменная num может принимать 4 значения: 1, 2, 3 или 4. Если она имеет значение '1', 
-// то в переменную result запишем "зима", если имеет значение "2" - "весна" и так далее. 
-// Решите задачу через switch-case.
+/* 2. The variable num can take 4 values: 1, 2, 3 or 4. If it has the value '1',
+then we will write "winter" into the variable result, if it has the value "2" - "spring" 
+and so on. Solve the problem with switch-case.*/
 let result = "";
 let num = numberRandom(1,4);
 console.log(num);
@@ -31,22 +31,23 @@ switch (num) {
 }
 console.log(result);
 
-// 3. Данная строка 'aaa bbb ccc ". Вырез с нее слово "bbb" тремя различными способами 
-// (через substr, substring, slice).
+/* 3. Given string 'aaa bbb ccc ". Cut the word" bbb "from it in three different 
+ways (via substr, substring, slice).*/
 let str = 'aaa bbb ccc';
 console.log(str.substr(4,3), str.substring(4,7), str.slice(4,7));
 
-// 4. Данная строка 'I learn javascript! ". Найдите позицию подстроки "learn" и длину 
-// строки. Заменить javascript на html
+/* 4. Given string "I learn javascript!". Find the position of the substring "learn" 
+and line length. Replace "javascript" на "html"*/
 str = 'I learn javascript!';
 console.log(str.indexOf("learn"), str.length);
 console.log(str.replace('javascript', 'html'));
 
-// 5. Проверьте, что строка начинается на http: //
+/* 5. Check that the line starts with http: // */
 str = "https://drive.google.com/drive/u/0/folders/14m4iyb82WjZspIBOcELXZZYHzJ4GuSm1";
 console.log(str.startsWith('https://'));
 
-// 6. Сделайте функцию, принимает параметром число от 1 до 7, а возвращает день недели.
+/* 6. Make a function that takes a number from 1 to 7 as a parameter and 
+returns the day of the week.*/
 function getDay(n) {
     console.log(n);
     let result = "";
@@ -77,7 +78,8 @@ function getDay(n) {
 }
 console.log(getDay(numberRandom(1,7)));
 
-// 7. С помощью цикла for сформулируйте строку '-1-2-3-4-5-6-7-8-9- "и запишите ее в переменную str
+/* 7. Use a loop 'for' to formulate the string "-1-2-3-4-5-6-7-8-9-" and write 
+it to a variable str*/
 str = "";
 for (let i=1; i<=9; i++){
     str += "-" + i;
@@ -85,7 +87,7 @@ for (let i=1; i<=9; i++){
 str += "-";
 console.log(str);
 
-// 8. Выведите 10 случайных чисел с помощью цикла
+/* 8. Print 10 random numbers using a loop*/
 function getNewArr (n){
     let arr = [];
     for (let i=0; i<n; i++){
@@ -95,115 +97,115 @@ function getNewArr (n){
 }
 console.log(getNewArr(10).join(', '));
 
-// 9. Дан массив [ 'a', 'b', 'c']. Добавьте ему в конец элементы 1, 2, 3.
-arr = ['a', 'b', 'c'];
-
+/* 9. Given an array [ 'a', 'b', 'c']. Add elements to it at the end 1, 2, 3.*/
 function createFullArr(str) {
     let newArr = str.split(', ');
     for (let i of newArr) {
         arr.push(i);
     }
 }
-createFullArr("1, 2, 3")
+let arr = ['a', 'b', 'c'];
+createFullArr("1, 2, 3");
 console.log(arr);
 
-// 10. Дан массив [1, 2, 3]. Добавьте ему на начало элементы 4, 5, 6.
-arr = [1, 2, 3];
-
-function createFullArr(str) {
+/* 10. Given an array [1, 2, 3]. Add elements to it at the beginning 4, 5, 6.*/
+function addToStartArray(str) {
     let newArr = str.split(', ').reverse();
     for (let item of newArr) {
         arr.unshift(parseInt(item));
     }
 }
-createFullArr("4, 5, 6")
+arr = [1, 2, 3];
+addToStartArray("4, 5, 6")
 console.log(arr);
 
-// 11. Дан массив [ 'js', 'css "," jq']. Выведите на экран последний элемент.
+/* 11. Given an array [ 'js', 'css "," jq']. Print the last element.*/
 arr = ['js', 'css', 'jq'];
 console.log(arr.slice(-1));
 console.log(arr.pop(0));
 
-// 13. Дан массив [1, 2, 3, 4, 5]. С помощью метода splice запишите в новый элементы [1, 2, 10, 11, 5].
+/* 13. Given an array [1, 2, 3, 4, 5]. Using the splice method, write in
+new items [1, 2, 10, 11, 5].*/
 arr = [1, 2, 3, 4, 5];
 arr.splice(2, 2, 10, 11);
 console.log(arr);
 
-// 14. Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', 
-// в третьей "333" и так далее.
+/* 14. Fill the array as follows: write '1' in the first element,
+in the second '22', in the third "333" and so on.*/
 arr = [];
 for (let i = 0; i < 3; i++) {
     let localeArr = [];
     for (let j = 0; j <= i; j++) {
-        localeArr[j] = i + 1
+        localeArr[j] = i + 1;
     }
     arr.push(localeArr);
 }
 console.log(arr);
 
-// 15. Сделайте функцию arrayFill, которая будет заполнять массив заданными значениями. Первым 
-// параметром функция принимает значения, каким заполнять массив, а вторым - сколько элементов 
-// должно быть в массиве. Пример: arrayFill ( 'x', 5) сделает массив [ 'x', 'x', 'x', 'x', 'x'].
-arr = [];
-
+/* 15. Make an arrayFill function that will fill the array with the given values. The first
+as a parameter, the function takes values ​​with which to fill the array, and the second - how 
+many elements must be in an array. Example: arrayFill ('x', 5) will make an 
+array ['x', 'x', 'x', 'x', 'x'].*/
 function arrayFill(element, size) {
-    console.log(element, size)
+    console.log(element, size);
     for (let i = 0; i < size; i++) {
-        arr[i] = element
+        arr[i] = element;
     }
-};
-
-arrayFill(numberRandom(0, 10), numberRandom(0, 10))
+}
+arr = [];
+arrayFill(numberRandom(0, 10), numberRandom(0, 10));
 console.log(arr);
 
-// 16. Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, 
-// чтобы в сумме получилось больше 10-ти.
-arr = [];
-
-function fillRandomArray() {
+/* 16. An array with numbers is given. Find out how many elements you need to add from 
+the beginning of the array, so that the total is more than 10.*/
+function getRandomArray() {
+    let arr = [];
     let i = 0;
     while (i < 7) {
         arr[i] = numberRandom(0, 5);
-        i++
+        i++;
     }
-    console.log(arr)
+    console.log(arr);
+    return arr;
 }
-fillRandomArray();
-result = 0;
-let j = 0;
-while (result <= 10) {
-    result += arr[j];
-    j++;
+function getTotalCount(array){
+    let result = 0;
+    let j = 0;
+    while (result <= 10) {
+        result += array[j];
+        j++;
+    }
+    console.log(j);
 }
-console.log(j)
+getTotalCount(getRandomArray());
 
-// 17. Заполните массив 10-й случайными числами от 1 до 10 с помощью цикла
-arr = [];
+/* 17. Fill the array with the 10th random numbers from 1 to 10 using a loop.*/
 function createArr(){
     for (let i = 0; i < 10; i++) {
-        arr[i] = numberRandom(0, 10)
+        arr[i] = numberRandom(0, 10);
     }
 }
+arr = [];
 createArr();
 console.log(arr);
 
-// 18. Таблица умножения в цикле
+/* 18. Multiplication table in a loop.*/
 for (let i=1; i<=9; i++) {
     for (let j=1; j<=9; j++) {
         console.log(i + ' x ' + j + ' = ' + i*j);
     }
 }
 
-// 19. Дан массив с числами. Или не используя метода reverse переверните его элементы в обратном порядке.
+/* 19. An array with numbers is given. without using the reverse method, reverse it.*/
 arr = [1, 2, 3, 4, 5];
-newArr = [];
+let newArr = [];
 for (let i=0; i<arr.length; i++) {
     newArr[i] = arr[arr.length-1-i];
 }
 console.log(newArr);
 
-// 20. Дано двумерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов 
-// этого массива.
+/* 20. You are given a two-dimensional array with numbers, for example 
+[[1, 2, 3], [4, 5], [6]]. Find the sum of the elements of this array.*/
 arr = [
     [1, 2, 3],
     [4, 5],
@@ -217,23 +219,23 @@ for (let i=0; i<arr.length; i++) {
 }
 console.log(result);
 
-// 21. Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает 
-// целое число и возвращает сумму его цифр.
+/* 21. Make a function getDigitsSum that takes as a parameter an integer 
+and returns the sum of its digits.*/
 function getDigitsSum(n) {
-    console.log(n)
+    console.log(n);
     let str = "" + n;
     let res = 0;
     for (let i = 0; i<str.length; i++){
         res += parseInt(str[i]);
     }
 
-    console.log(res)
+    console.log(res);
 }
-getDigitsSum(numberRandom(11, 1000))
+getDigitsSum(numberRandom(11, 1000));
 
-// 22. Дан массив с числами. Создайте из него новый массив, где останутся лежать только положительные 
-// числа. Создайте для этого вспомогательную функцию isPositive (), которая параметром будет принимать 
-// число и возвращать true, если число положительное, и false - если отрицательное.
+/* 22. Given an array with numbers. Create a new array from it, where only positive ones 
+will remain numbers. Create a helper function isPositive () for this, which will take as 
+a parameter number and return true if the number is positive and false if it is negative.*/
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let positiveArr = arr.filter(isPositive);
 function isPositive(item){
@@ -241,8 +243,8 @@ function isPositive(item){
 }
 console.log(positiveArr);
 
-// 23. С помощью цикла вывести все трицифровые числа в которых сумма всех цифр равна - 9 
-// Например: 2 + 4 + 3 = 9
+/* 23.Using a loop, output all three-digit numbers in which the sum of all digits is - 9
+For example: 2 + 4 + 3 = 9*/
 function showDigitNumber() {
     const arr = [];
     for (let i = 100; i < 999; i++) {
@@ -253,8 +255,7 @@ function showDigitNumber() {
 }
 
 function checkDigitalNumber(string, array) {
-    let res = 0;
-
+    let res = 0
     for (let j = 0; j < string.length; j++) {
         res += parseInt(string[j]);
     }
@@ -264,12 +265,11 @@ function checkDigitalNumber(string, array) {
 }
 showDigitNumber()
 
-// 24. С помощью цикла вывести пользователей как онлайн
+/* 24. With the help of a loop, bring users online.*/
 function User (name, online){
     this.name = name,
     this.online = online
 } 
-
 const user1 = new User("Alan",false);
 const user2 = new User("Jeff",true);
 const user3 = new User("Sarah",false);
