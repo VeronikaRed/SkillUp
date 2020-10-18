@@ -1,8 +1,7 @@
-// ● написать оператор if..else который принимает значение с prompt и
-// выводит в консоль
-// 1, если значение больше нуля,
-// 1, если значение меньше нуля,
-// 0, если значение равно нулю.
+// ● write operator if..else which takes a value from prompt and logs to the console
+// 1 if the value is greater than zero,
+// 1 if the value is less than zero,
+// 0 if the value is zero
 let number = parseInt(prompt ("Enter your number", " "));
 
 if (number > 0  || number < 0) {
@@ -13,7 +12,7 @@ if (number > 0  || number < 0) {
     console.log("Something went wrong");
 }
 
-// ● переписать в тернарный оператор
+// ● rewrite to ternary operator:
 // var a = 1;
 // var n;
 // if (a> 0) {n = true; }
@@ -22,7 +21,7 @@ let a = 1;
 let n = (a > 0) ? true : false;
 console.log(n);
 
-// Логические операторы
+// Logical operators
 a = 5;
 let b = 3;
 if ((a>b) && (a===b)){
@@ -31,13 +30,11 @@ if ((a>b) && (a===b)){
     console.log("This makes no sense");
 }
 
-
 if (true && 0 && ('a' < 'Z')){
     console.log("Ok");
 } else {
     console.log("This makes no sense");
 }
-
 
 if ((a>b) || true || ('2'==2) || (false == '')){
     console.log("Ok");
@@ -45,13 +42,11 @@ if ((a>b) || true || ('2'==2) || (false == '')){
     console.log("This makes no sense");
 }
 
-
 if ((a<b) && (0 == false)){
     console.log("Ok");
 } else {
     console.log("This makes no sense");
 }
-
 
 if (!(2==2) || (true && '')){
     console.log("Ok");
@@ -59,41 +54,38 @@ if (!(2==2) || (true && '')){
     console.log("This makes no sense");
 }
 
-// С помощью конструкции switch записать следующие условия:
-// - если ввели 1, то вывести в консоль 'a'
-// - если ввели 2 - "b"
-// - если ввели 3 - "c"
-// - иначе - "z"
+// Using the switch statement, write the following conditions:
+// - if you entered 1, then output 'a' to the console
+// - if you entered 2 - "b"
+// - if you entered 3 - "c"
+// - otherwise - "z"
 switch(number){
     case 1: 
         console.log("a");
         break;
-
     case 2: 
         console.log("b");
         break;
-    
     case 3: 
         console.log("c");
         break;
-
     default:
         console.log("z");
 }
 
-// вывести в консоль с помощью цикла for квадраты чисел от 1 до 9   "1,4,9, ... 81"
+// output to the console using a loop "for" squares of numbers from 1 to 9  "1,4,9, ... 81"
 for (let i=1; i<=9; i++){
 console.log(i*i);
 }
 
-// вывести в консоль с помощью цикла while квадраты чисел от 1 до 9   "1,4,9, ... 81"
+// output to the console using a loop "while" squares of numbers from 1 to 9  "1,4,9, ... 81"
 let j = 1;
 while( j <= 9 ){
     console.log(j*j);
     j++
 }
 
-// функция принимает два параметра (числа) и возвращает больший из них
+// the function takes two parameters (numbers) and returns the larger of them
 function whatBigger(a, b) {
     console.log (`first number = ${a}, second number = ${b}`)
     return a > b ? a : b;
