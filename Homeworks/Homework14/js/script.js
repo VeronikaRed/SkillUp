@@ -1,9 +1,9 @@
-// добавлять элементы в массив через метод prompt() пока пользователь
-// не нажмет cancel
+/* add items to the array via the prompt () method while the user is
+will not click cancel */
 function setupArray() {
     let array = [];
     while (true) {
-        let variable = prompt("Enter number", "");
+        let variable = prompt("Enter number to new array", "");
         if (variable == null || variable == "") break;
         array.push(parseInt(variable));
     }
@@ -11,12 +11,7 @@ function setupArray() {
 }
 console.log(setupArray());
 
-// найти сумму элементов двумерного массива
-let Arr = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-];
+/* find the sum of the elements of a two-dimensional array*/
 function getSumOfTwoDimArr() {
     let res = 0;
     for (let i = 0; i < Arr.length; i++) {
@@ -26,12 +21,15 @@ function getSumOfTwoDimArr() {
     }
     return res;
 }
+let Arr = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
 console.log(getSumOfTwoDimArr());
 
-// разбить строка lorem по разделитель “ “ и вывести в консоль слова
-// длиной более 5
-let str = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, id.";
-
+/*split the lorem string by separator " ", and print words 
+longer than 5 to the console*/
 function showLongWords(str) {
     let array = str.split(" ");
     for (let i = 0; i < array.length; i++) {
@@ -40,16 +38,17 @@ function showLongWords(str) {
         }
     }
 }
+let str = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, id.";
 showLongWords(str);
 
-// дано массив [1, 9, 22, 7, 6] добавить число 8 после 22
+/* given an array [1, 9, 22, 7, 6] add number 8 after 22 */
 let arr = [1, 9, 22, 7, 6];
 arr.splice(3, 0, 8);
 console.log(arr);
 
-// написать функцию randomNumber (number), которая наполняет массив
-// случайными числами от 0 до 100, где number - длина массива
-function randomNumber(length, start = 0, end = 100) {
+/* write a function randomNumber (number) that fills the array
+random numbers from 0 to 100, where number is the length of the array*/
+function getRandomNumber(length, start = 0, end = 100) {
     let arr = [];
     for (let i = 0; i < length; i++) {
         arr[i] = getRandom(start, end);
@@ -60,14 +59,9 @@ function randomNumber(length, start = 0, end = 100) {
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+console.log(getRandomNumber(7));
 
-console.log(randomNumber(7));
-
-// проверить в массиве есть число, которое вводится через prompt ()
-let arrOfNumbers = randomNumber(7, 0, 10);
-console.log(`generated array is ${arrOfNumbers}`)
-let candidate = parseInt(prompt("Enter your number", ""));
-
+/* check if the array contains a number that is entered via prompt ()*/
 function checkCandidate(arrOfNumbers, candidate){
 
     console.log(`entered number is ${candidate}`);
@@ -75,10 +69,13 @@ function checkCandidate(arrOfNumbers, candidate){
         return (item == candidate) ? 'here I am' : 'no';
     }
 }
+let arrOfNumbers = getRandomNumber(7, 0, 10);
+console.log(`generated array is ${arrOfNumbers}`);
+let candidate = parseInt(prompt("Enter your number", ""));
 
 console.log(checkCandidate(arrOfNumbers, candidate));
 
-// с помощью метода forEach найти самое длинное слово в строке lorem
+/* use the forEach method to find the longest word in the lorem string*/
 let string = "Lorem ipsum dolor sit amet consectetur adipisicing elit Labore quasi"
 let temp = "";
 string.split(" ").forEach( item => {
@@ -88,8 +85,8 @@ string.split(" ").forEach( item => {
 });
 console.log(temp);
 
-// с помощью метода map создать массив квадратов массива
-// arr = [8, 6, 12, 10];
+/*using the map method create an array of squares of the 
+array arr = [8, 6, 12, 10];*/
 arr = [8, 6, 12, 10];
 array = arr.map(item => item**2);
 console.log(array);
