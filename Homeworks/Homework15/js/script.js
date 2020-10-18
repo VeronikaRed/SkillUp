@@ -1,19 +1,17 @@
-// Написать метод который вернет срока вида "html - 5"
+/*Write a method that will return a string like "html - 5"*/
 let skill = {
     name: 'html',
     level: 5,
     getFullName: function () {
         return this.name + " - " + this.level;
     }
-}
+};
 console.log(skill.getFullName());
 
-
-// // Создайте объект calculator с методами:
-// // - sum () возвращает сумму двух значений
-// // - mul () возвращает произведение этих двух значений
-// // - инициализировать объект через функцию-конструктор
-
+/*Create a calculator object with methods:
+- sum () returns the sum of two values
+- mul () returns the product of these two values
+- initialize the object through the function-constructor*/
 function CreateCalc(a, b) {
     this.a = a;
     this.b = b;
