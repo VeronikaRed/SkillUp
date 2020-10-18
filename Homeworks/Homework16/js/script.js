@@ -53,25 +53,25 @@ function getDay(n) {
     let result = "";
     switch (n) {
         case 1:
-            result = "sunday"
+            result = "sunday";
             break;
         case 2:
-            result = "monday"
+            result = "monday";
             break;
         case 3:
-            result = "tuesday"
+            result = "tuesday";
             break;
         case 4:
-            result = "wednesday"
+            result = "wednesday";
             break;
         case 5:
-            result = "thursday"
+            result = "thursday";
             break;
         case 6:
-            result = "friday"
+            result = "friday";
             break;
         case 7:
-            result = "saturday"
+            result = "saturday";
             break;
     }
     return result;
@@ -116,7 +116,7 @@ function addToStartArray(str) {
     }
 }
 arr = [1, 2, 3];
-addToStartArray("4, 5, 6")
+addToStartArray("4, 5, 6");
 console.log(arr);
 
 /* 11. Given an array [ 'js', 'css "," jq']. Print the last element.*/
@@ -143,7 +143,7 @@ for (let i = 0; i < 3; i++) {
 console.log(arr);
 
 /* 15. Make an arrayFill function that will fill the array with the given values. The first
-as a parameter, the function takes values ​​with which to fill the array, and the second - how 
+as a parameter, the function takes values with which to fill the array, and the second - how 
 many elements must be in an array. Example: arrayFill ('x', 5) will make an 
 array ['x', 'x', 'x', 'x', 'x'].*/
 function arrayFill(element, size) {
@@ -251,24 +251,24 @@ function showDigitNumber() {
         let str = "" + i;
         checkDigitalNumber(str, arr);
     }
-    console.log(arr)
+    console.log(arr);
 }
 
 function checkDigitalNumber(string, array) {
-    let res = 0
+    let res = 0;
     for (let j = 0; j < string.length; j++) {
         res += parseInt(string[j]);
     }
     if (res == 9) {
-        array.push(string)
+        array.push(string);
     }
 }
-showDigitNumber()
+showDigitNumber();
 
 /* 24. With the help of a loop, bring users online.*/
 function User (name, online){
     this.name = name,
-    this.online = online
+    this.online = online;
 } 
 const user1 = new User("Alan",false);
 const user2 = new User("Jeff",true);
