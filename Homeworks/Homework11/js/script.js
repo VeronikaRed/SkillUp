@@ -11,7 +11,7 @@ if (a!=b) {
     result = true;
 }else{
     result = false;
-};
+}
 console.log(result);
 
 a = 1; b = "";
@@ -24,4 +24,4 @@ console.log("a">"Z");
 a = false; b = 0;
 console.log(a >= b);
 
-console.log(("2" === 2) ? "ok" : "not")
+console.log(("2" === 2) ? "ok" : "not");
