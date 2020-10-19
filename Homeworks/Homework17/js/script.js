@@ -1,5 +1,5 @@
-// ● найти ul элемент
-// ● найти другой li
+/* ● find ul element
+   ● find the second li*/
 let nodes = document.body.children;
 for (let i=0; i<nodes.length; i++) {
     if (nodes[i].nodeName == "UL"){
@@ -11,32 +11,32 @@ for (let i=0; i<nodes.length; i++) {
                 if (cnt == 1){
                     console.log (children[j].innerHTML);
                 }
-                cnt++
+                cnt++;
             }
         }
     }
 }
 
-// ● найти элемент с классом list
-// ● найти другой li и изменить в нем текст
-// ● сделать текст в div красным
+/* ● find an element with the list class
+   ● find the second li and change the text in it
+   ● make the text in the div red*/
 let a = document.getElementsByClassName("list")[0];
 console.log(a);
 let b = a.lastElementChild;
 b.innerHTML = "SCSS";
 document.getElementsByTagName("div")[0].style.color = "red";
 
-// ● к чекбоксах добавить атрибут checked
+// ● add the checked attribute to the checkboxes.
 document.getElementsByTagName("input")[0].setAttribute("checked", true);
 
-// ● если пункт имеет класс "text" то удалить его и наоборот
+// ● if the item has class "text" then delete it and vice versa.
 for (let i=0; i<nodes.length; i++){
     if (nodes[i].nodeName == "INPUT"){
         nodes[i].classList.toggle("text");
     }
 }
 
-// ● добавить в список 5 элементов li с текстом от 1 до 5
+// ● add 5 li elements with text from 1 to 5 to the list.
 for (let i=1; i<=5; i++){
     let newLi = document.createElement("LI");
     newLi.innerHTML = i;
