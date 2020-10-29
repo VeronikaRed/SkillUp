@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+
+.wrapper {
+    max-width: 1500px;
+    height: 700px;
+    background: linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    width: 530px;
+
+    padding: 136px 0 0 183px;
+}
+
+h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 44px;
+    color: #FFF7DF;
+    line-height: 158.34%;
+    font-weight: 900;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    line-height: 33px;
+    color: #FFF7DF;
+}
+
+button {
+    font-family: 'Work Sans', sans-serif;
+    width: 160px;
+    height: 56px;
+    background: #FFF7DF;
+    border-radius: 100px;
+    border: 0px;
+    color: #FFC000;
+}
+.red{
+    color: red;
+    background: red;
+}
+img{
+    height: 400px;
+}
+#goToPrevSlide, #goToNextSlide{
+    margin: 50px 5px 0 0;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+
+}
+#goToPrevSlide:hover, #goToNextSlide:hover{
+    color: #FFC050;
+    font-size: 44px;
+}
