@@ -6,11 +6,11 @@ class Timer {
     start(){
         this.interval = setInterval(function(){
             document.getElementById('div').innerHTML = timer.time++;
-            },1000)
+            },1000);
     };
     stop(){
         clearInterval(this.interval);
-        this.interval = null
+        this.interval = null;
     };
     reset(){
         this.time = 0;
@@ -20,12 +20,12 @@ class Timer {
 
 let timer = new Timer();
 
-document.getElementById("stop").addEventListener('click', () =>{
-timer.stop()
+document.getElementById('stop').addEventListener('click', () =>{
+timer.stop();
 });
 
 document.getElementById('reset').addEventListener('click', () =>{
-    timer.reset()
+    timer.reset();
 });
 
 document.getElementById('start').addEventListener('click', () =>{

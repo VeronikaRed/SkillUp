@@ -1,3 +1,3 @@
 let getRemainder = (a,b=2) => a%b;
-console.log(getRemainder(5))
+console.log(getRemainder(5));
 

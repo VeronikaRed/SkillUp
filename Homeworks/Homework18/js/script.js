@@ -1,6 +1,6 @@
 /*● add a handler to the button, which, when clicked, will go to the console 
 display text from the field.*/
-document.getElementById("btn").addEventListener("click", function(){
+document.getElementById('btn').addEventListener('click', function(){
     visualize(inputArea.value);
 });
 function visualize(value){
@@ -9,16 +9,16 @@ function visualize(value){
 
 /* ● write a handler for the click event so that the element moves to
 click coordinates.*/
-document.body.style.position="relative";
+document.body.style.position='relative';
 let child = null;
-document.addEventListener("click", function(click){
+document.addEventListener('click', function(click){
     if (child == null){
         child = document.createElement('div');
-        child.innerHTML = "Hello";
-        child.style.position="absolute";
+        child.innerHTML = 'Hello';
+        child.style.position = 'absolute';
         }
-    child.style.top = click.offsetY + "px";
-    child.style.left = click.offsetX + "px";
+    child.style.top = click.offsetY + 'px';
+    child.style.left = click.offsetX + 'px';
     this.body.append(child);
 });
 
@@ -27,8 +27,8 @@ let item = null;
 dropdown.addEventListener('click', function (event) {
     if (item == null){
         item = document.createElement('div');
-        item.style.position = "absolute";
-        item.style.left = event.target.offsetLeft + "px";
+        item.style.position = 'absolute';
+        item.style.left = event.target.offsetLeft + 'px';
         dropdown.after(item);
         createContextMenu(item);
     }
@@ -39,24 +39,24 @@ function createContextMenu(parent) {
         let item = document.createElement('div');
         item.innerHTML = i;
         item.addEventListener('click', function (event) {
-            event.target.classList.toggle("color");
-        })
+            event.target.classList.toggle('color');
+        });
         parent.append(item);
     }
 }
 
 // ● highlight table cells on hover.
-table.addEventListener("mouseover", function(event){
- if (event.target.tagName == "TD"){
-     event.target.classList.add("color");
+table.addEventListener('mouseover', function(event){
+ if (event.target.tagName == 'TD'){
+     event.target.classList.add('color');
  }
 });
 
 // ● when scrolling the page by 200px, toggle the class in the header.
-let head = document.getElementsByTagName("header")[0];
-window.addEventListener("scroll", function(){
+let head = document.getElementsByTagName('header')[0];
+window.addEventListener('scroll', function(){
     if(document.documentElement.scrollTop > 200){
-        head.classList.add("header");
+        head.classList.add('header');
     }
 });
 
@@ -64,7 +64,7 @@ window.addEventListener("scroll", function(){
 add class*/
 window.addEventListener('resize', function(){
     if(this.innerWidth < 768){
-        txt.classList.toggle("color_width");
+        txt.classList.toggle('colorWidth');
     }
 });
 
@@ -73,6 +73,6 @@ window.addEventListener('resize', function(){
 var number = document.querySelector('.number');
 number.addEventListener('keyup', function(e) {
     if (!(e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 96 && e.keyCode <= 105)){
-        this.value = "";
+        this.value = '';
     }
 });

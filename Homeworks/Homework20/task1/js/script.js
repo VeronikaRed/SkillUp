@@ -11,11 +11,10 @@ $('#button').click(function(){
 });
 
 $( window ).resize(function () { 
-
     if ($(this).width() < 768 && $('.modal-backdrop').length == 0){
         addModalWindow();
     }
-})
+});
 
 function addModalWindow(){
     $.ajax({
