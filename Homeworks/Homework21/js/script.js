@@ -18,18 +18,21 @@ class Timer {
     }
 }
 
+let addListeners = timerObj => {
+    stopBtn.addEventListener('click', () => {
+        timerObj.stop();
+    });
+
+    resetBtn.addEventListener('click', () => {
+        timerObj.reset();
+    });
+
+    startBtn.addEventListener('click', () => {
+        if (timerObj.interval == null) {
+            timerObj.start();
+        }
+    });
+};
+
 let timer = new Timer();
-
-stopBtn.addEventListener('click', () => {
-    timer.stop();
-});
-
-resetBtn.addEventListener('click', () => {
-    timer.reset();
-});
-
-startBtn.addEventListener('click', () => {
-    if (timer.interval == null) {
-        timer.start();
-    }
-});
+addListeners(timer);
