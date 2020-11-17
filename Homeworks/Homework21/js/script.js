@@ -5,7 +5,7 @@ class Timer {
     }
     start() {
         this.interval = setInterval(function () {
-            document.getElementById('div').innerHTML = timer.time++;
+            div.innerHTML = timer.time++;
         }, 1000);
     }
     stop() {
@@ -14,21 +14,21 @@ class Timer {
     }
     reset() {
         this.time = 0;
-        document.getElementById('div').innerHTML = timer.time;
+        div.innerHTML = timer.time;
     }
 }
 
 let timer = new Timer();
 
-document.getElementById('stop').addEventListener('click', () => {
+stop.addEventListener('click', () => {
     timer.stop();
 });
 
-document.getElementById('reset').addEventListener('click', () => {
+reset.addEventListener('click', () => {
     timer.reset();
 });
 
-document.getElementById('start').addEventListener('click', () => {
+start.addEventListener('click', () => {
     if (timer.interval == null) {
         timer.start();
     }
