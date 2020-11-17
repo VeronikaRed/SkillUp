@@ -35,4 +35,5 @@ let addListeners = timerObj => {
 };
 
 let timer = new Timer();
+
 addListeners(timer);
