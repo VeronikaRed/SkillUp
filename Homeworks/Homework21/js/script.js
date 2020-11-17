@@ -20,15 +20,15 @@ class Timer {
 
 let timer = new Timer();
 
-stop.addEventListener('click', () => {
+stopBtn.addEventListener('click', () => {
     timer.stop();
 });
 
-reset.addEventListener('click', () => {
+resetBtn.addEventListener('click', () => {
     timer.reset();
 });
 
-start.addEventListener('click', () => {
+startBtn.addEventListener('click', () => {
     if (timer.interval == null) {
         timer.start();
     }
