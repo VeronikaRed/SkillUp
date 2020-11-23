@@ -1,0 +1,14 @@
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+.inputCard{
+    width: 350px;
+    margin: 0 auto;
+}

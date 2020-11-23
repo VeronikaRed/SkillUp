@@ -1,0 +1,17 @@
+.card{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    border: 2px solid grey;
+    background-color: rgb(224, 226, 255);
+    line-height: 28px;
+    box-shadow:  10px 5px rgb(206, 107, 168);
+}
+.deleteBtn{
+    background-color: rgb(101, 115, 255);
+    color: rgb(240, 250, 220);
+}
+.eye:hover, .deleteBtn:hover{
+    transform: scale(1.2);
+}
