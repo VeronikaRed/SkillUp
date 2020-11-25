@@ -1,6 +1,6 @@
 import { Component, createRef } from 'react';
 import { Title } from './components/Title/Title';
-
+import { LoginInput } from './components/LoginInput/LoginInput';
 import './App.scss';
 
 const DEFAULT_POSTS = [
@@ -42,9 +42,11 @@ export class App extends Component {
         posts: DEFAULT_POSTS,
         postsAmount: 3,
         showPosts: true,
-        login: ''
+        login: '',
+        showLogin: false
     };
-    InputNameRef = createRef();
+
+    InputRef = createRef();
 
     handleRemovePost(postId) {
         const { posts } = this.state;
@@ -54,35 +56,55 @@ export class App extends Component {
             postsAmount: filteredPosts.length
         });
     }
+
     handleTogglePosts = () => {
         const { showPosts } = this.state;
         this.setState({ showPosts: !showPosts });
     };
+
     handleChangeInput = e => {
         this.setState({ login: e.target.value });
     };
 
-    render() {
-        const { posts, showPosts, postsAmount, login } = this.state;
+    handleFocusInput = () => {
+        this.InputRef.current.focus();
+    };
+    handleToggleLogin = () => {
+        console.log(this.InputRef.current.value);
+        this.setState(prevState => ({
+            login: this.InputRef.current.value,
+            showLogin: !prevState.showLogin
+        }));
+    };
 
+    render() {
+        const { posts, showPosts, postsAmount, login, showLogin } = this.state;
+        console.log('app');
         return (
             <div className="app">
-                <button type="button" onClick={this.handleTogglePosts}>
-                    {showPosts ? 'Hide posts' : 'Show posts'}
-                </button>
+                <div>
+                    <button type="button" onClick={this.handleTogglePosts}>
+                        {showPosts ? 'Hide posts' : 'Show posts'}
+                    </button>
+                    <button type="button" onClick={this.handleFocusInput}>
+                        Focus input
+                    </button>
+                    <button type="button" onClick={this.handleToggleLogin}>
+                        Show login
+                    </button>
+                </div>
 
                 <div>
                     <span>Post Amount:</span> <span>{postsAmount}</span>
                 </div>
-                <div>
-                    <input
-                        type="text"
-                        name="login"
-                        placeholder="Login"
-                        autoComplete="off"
-                        value={this.handleChangeInput}
-                    />
-                </div>
+
+                {showLogin && <h1>{login}</h1>}
+
+                <LoginInput
+                    // value={login}
+                    // onChange={this.handleChangeInput}
+                    ref={this.InputRef}
+                />
 
                 {showPosts &&
                     posts.map((post, i) => (
