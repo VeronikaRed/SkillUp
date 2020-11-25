@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './Card.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
+import PT from 'prop-types';
 
 export class Card extends Component {
     state = {
@@ -12,11 +13,17 @@ export class Card extends Component {
         this.setState({ showNumber: !showNumber });
     }
     render() {
-        const { name, lastName, secretNumber } = this.props.data;
+        const {
+            name,
+            lastName,
+            secretNumber,
+            index,
+            removeMethod
+        } = this.props;
         const { showNumber } = this.state;
         return (
             <div className="card">
-                <div>Order number: #{this.props.index + 1}</div>
+                <div>Order number: #{index + 1}</div>
                 <div>Name: {name}</div>
                 <div>Last name: {lastName}</div>
                 <div>
@@ -36,9 +43,7 @@ export class Card extends Component {
                 <div>
                     <button
                         type="button"
-                        onClick={() =>
-                            this.props.removeMethod(this.props.index)
-                        }
+                        onClick={() => removeMethod(index)}
                         className="deleteBtn"
                     >
                         Delete
@@ -48,3 +53,11 @@ export class Card extends Component {
         );
     }
 }
+
+Card.propTypes = {
+    name: PT.oneOfType([PT.string, PT.number]),
+    lastName: PT.oneOfType([PT.string, PT.number]),
+    secretNumber: PT.number,
+    index: PT.number,
+    removeMethod: PT.func
+};

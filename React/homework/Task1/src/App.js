@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import { InputForm } from './components/InputForm/InputForm';
 import { Card } from './components/Card/Card';
-import './App.scss';
 import { random } from './utils/random';
+import './App.scss';
 
 let CARDS = [];
 
@@ -28,14 +28,16 @@ export class App extends Component {
         return (
             <div className="wrapper">
                 <div className="inputCard">
-                    <InputForm myMethod={this.updateData}></InputForm>
+                    <InputForm updateData={this.updateData}></InputForm>
                 </div>
                 <div className="cards">
                     {customers.map((person, i) => {
                         return (
                             <div key={i}>
                                 <Card
-                                    data={person}
+                                    name={person.name}
+                                    lastName={person.lastName}
+                                    secretNumber={person.secretNumber}
                                     index={i}
                                     removeMethod={this.handleRemoveCard}
                                 />

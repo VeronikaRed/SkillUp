@@ -1,6 +1,7 @@
 import { Component, createRef } from 'react';
 import { Input } from '../Input/Input';
 import { ErCard } from '../ErrorCard/ErrorCard';
+import PT from 'prop-types';
 import './InputForm.scss';
 
 export class InputForm extends Component {
@@ -10,11 +11,12 @@ export class InputForm extends Component {
     inputLastNameRef = createRef();
 
     handleCheck() {
+        const { updateData } = this.props;
         if (
             this.inputNameRef.current.value &&
             this.inputLastNameRef.current.value
         ) {
-            this.props.myMethod(
+            updateData(
                 this.inputNameRef.current.value,
                 this.inputLastNameRef.current.value
             );
@@ -50,3 +52,7 @@ export class InputForm extends Component {
         );
     }
 }
+
+InputForm.propTypes = {
+    updateData: PT.func
+};
