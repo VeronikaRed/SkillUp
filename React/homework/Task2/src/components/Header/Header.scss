@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__controls {
+        display: flex;
+        align-items: center;
+    }
+
+    &__translations-wrapper {
+        display: flex;
+        align-items: center;
+        margin-right: 2.5rem;
+    }
+
+    &__translations {
+        margin-left: 2.5rem;
+    }
+
+    &__translation {
+        $size: 4.5rem;
+
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+    }
+}
