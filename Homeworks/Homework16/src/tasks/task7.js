@@ -1,0 +1,8 @@
+export function sevenTask(n) {
+    let str = '';
+    for (let i = 1; i <= n; i++) {
+        str += '-' + i;
+    }
+    str += '-';
+    console.log(str);
+}
