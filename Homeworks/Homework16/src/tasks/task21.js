@@ -5,6 +5,5 @@ export function getDigitsSum(n) {
     for (let i = 0; i < str.length; i++) {
         res += parseInt(str[i]);
     }
-
     console.log(res);
 }
