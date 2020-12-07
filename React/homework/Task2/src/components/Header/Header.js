@@ -17,11 +17,10 @@ const TRANSLATIONS = [
         text: 'ua'
     }
 ];
-export const Header = ({ generalInfo, onToggleEditMode }) => {
+export const Header = ({ onToggleEditMode }) => {
     const [state, setState] = useState(TRANSLATIONS);
-    const { setTranslation } = useContext(AppContext);
-    const { headText, text, btn, language } = generalInfo;
-
+    const { header, setTranslation } = useContext(AppContext);
+    const { headText, text, btn } = header;
     const handleChangeTranslationId = event => {
         setTranslation(
             TRANSLATIONS.filter(item => item.text === event.target.value)

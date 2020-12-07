@@ -1,4 +1,4 @@
-import { useState, createContext, useRef } from 'react';
+import { useState, createContext } from 'react';
 import { Page } from '../Page/Page';
 import { Card } from '../Card/Card';
 import image1 from '../../resources/images/image-1.jpg';
@@ -6,7 +6,7 @@ import image2 from '../../resources/images/image-2.jpg';
 import image3 from '../../resources/images/image-3.jpg';
 import './App.scss';
 
-const PAGE_INFORMATION = [
+const MAIN_INFORMATION = [
     {
         btn: 'Add new translation',
         headText: 'User profiles',
@@ -18,7 +18,13 @@ const PAGE_INFORMATION = [
         moreBtn: 'Read more'
     }
 ];
-
+const HEADER_INFORMATION = [
+    {
+        btn: 'Add new translation',
+        headText: 'User profiles',
+        text: 'Here you can overview the user profiles'
+    }
+];
 const USERS = [
     [
         {
@@ -50,28 +56,43 @@ const USERS = [
         }
     ]
 ];
+const LINKS = [
+    [
+        { id: 1, url: '/', text: 'Home' },
+        { id: 2, url: '/office', text: 'Office' },
+        { id: 3, url: '/admin', text: 'Admin Panel' }
+    ]
+];
 
 export const AppContext = createContext(() => {});
 
 export const App = () => {
     const [translation, setTranslation] = useState(0);
-    const [state, setState] = useState({
-        page: PAGE_INFORMATION,
-        users: USERS
-    });
-    const { page, users } = state;
-    const refContainer = useRef();
+    const [main, setMain] = useState(MAIN_INFORMATION);
+    const [header, setHeader] = useState(HEADER_INFORMATION);
+    const [users, setUsers] = useState(USERS);
+    const [links, setLinks] = useState(LINKS);
+
     return (
-        <AppContext.Provider value={{ translation, setTranslation }}>
+        <AppContext.Provider
+            value={{
+                translation,
+                setTranslation,
+                main,
+                setMain,
+                header,
+                setHeader,
+                users,
+                setUsers,
+                links,
+                setLinks
+            }}
+        >
             <div className="app">
-                <Page generalInfo={page[translation]}>
+                <Page>
                     <div className="app__cards">
                         {users[translation].map(u => (
-                            <Card
-                                key={u.id}
-                                data={u}
-                                generalInfo={page[translation]}
-                            />
+                            <Card key={u.id} data={u} />
                         ))}
                     </div>
                 </Page>

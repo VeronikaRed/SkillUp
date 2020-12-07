@@ -1,9 +1,14 @@
+import { useContext } from 'react';
+import { AppContext } from '../App/App';
 import { Details } from '../Details/Details';
 import './Card.scss';
 
-export const Card = ({ data, generalInfo }) => {
+export const Card = ({ data }) => {
     const { firstName, lastName, age, imageUrl, userInfo } = data;
-    const { nameUser, lastNameUser, ageUser, dataUser, moreBtn } = generalInfo;
+    const { main, translation } = useContext(AppContext);
+    const { nameUser, lastNameUser, ageUser, dataUser, moreBtn } = main[
+        translation
+    ];
     return (
         <div className="card">
             <div className="card__top">

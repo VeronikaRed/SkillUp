@@ -8,7 +8,7 @@ import {
 import { Modal } from '../Modal/Modal';
 import './Page.scss';
 
-export const Page = ({ generalInfo, children }) => {
+export const Page = ({ children }) => {
     const [showTranslMode, setShowTranslMode] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [translArea, setTranslArea] = useState(null);
@@ -37,10 +37,7 @@ export const Page = ({ generalInfo, children }) => {
             className="page"
             onClick={showTranslMode ? handleMenuTranslate : null}
         >
-            <Header
-                generalInfo={generalInfo}
-                onToggleEditMode={handleToggleEditMode}
-            />
+            <Header onToggleEditMode={handleToggleEditMode} />
             {showTranslMode && <TranslateForm />}
             <main className="page__main">{children}</main>
             {showTranslMode && <CreateTranslateBtn />}

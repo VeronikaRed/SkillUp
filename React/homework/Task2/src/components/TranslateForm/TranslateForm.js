@@ -1,3 +1,5 @@
+import {useContext} from 'react';
+import { AppContext } from '../App/App';
 import './TranslateForm.scss';
 
 export const TranslateForm = () => {
@@ -15,9 +17,14 @@ export const TranslateForm = () => {
 };
 
 export const CreateTranslateBtn = () => {
+    const {page, setPage} = useContext(AppContext);
+    const handleAddPage = () => {
+        setPage(page.push(page)) 
+        const
+    }
     return (
         <div>
-            <button className="btn" type="button">
+            <button className="btn" type="button" onClick="handleAddPage">
                 Create new translation
             </button>
         </div>
