@@ -13,6 +13,15 @@ import { elevenTask } from '../tasks/task11';
 import { thirteenTask } from '../tasks/task13';
 import { drawPyramid } from '../tasks/task14';
 import { arrayFill } from '../tasks/task15';
+import {  } from '../tasks/task16';
+import { createArr } from '../tasks/task17';
+import { eighteenTask } from '../tasks/task18';
+import { nineteenTask } from '../tasks/task19';
+import { twentyTask } from '../tasks/task20';
+import { getDigitsSum } from '../tasks/task21';
+import {  } from '../tasks/task22';
+import {  } from '../tasks/task23';
+import {  } from '../tasks/task24';
 
 /* 1. If the variable is greater than zero and less than 5, then output "True", otherwise
 print "Wrong".*/
@@ -70,127 +79,76 @@ arrayFill(numberRandom(0, 10), numberRandom(0, 10));
 
 /* 16. An array with numbers is given. Find out how many elements you need to add from
 the beginning of the array, so that the total is more than 10.*/
-function getRandomArray() {
-    let arr = [];
-    let i = 0;
-    while (i < 7) {
-        arr[i] = numberRandom(0, 5);
-        i++;
+
+// getTotalCount(getRandomArray());
+
+/* 17. Fill the array with the 10th random numbers from 1 to 10 using a loop.*/
+createArr();
+
+/* 18. Multiplication table in a loop.*/
+eighteenTask();
+
+/* 19. An array with numbers is given. without using the reverse method, reverse it.*/
+nineteenTask([1, 2, 3, 4, 5]);
+
+/* 20. You are given a two-dimensional array with numbers, for example
+[[1, 2, 3], [4, 5], [6]]. Find the sum of the elements of this array.*/
+twentyTask([[1, 2, 3], [4, 5], [6]]);
+
+/* 21. Make a function getDigitsSum that takes as a parameter an integer
+and returns the sum of its digits.*/
+getDigitsSum(numberRandom(11, 1000));
+
+/* 22. Given an array with numbers. Create a new array from it, where only positive ones
+will remain numbers. Create a helper function isPositive () for this, which will take as
+a parameter number and return true if the number is positive and false if it is negative.*/
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let positiveArr = arr.filter(isPositive);
+function isPositive(item) {
+    return item % 2 == 0;
+}
+console.log(positiveArr);
+
+/* 23.Using a loop, output all three-digit numbers in which the sum of all digits is - 9
+For example: 2 + 4 + 3 = 9*/
+function showDigitNumber() {
+    const arr = [];
+    for (let i = 100; i < 999; i++) {
+        let str = '' + i;
+        checkDigitalNumber(str, arr);
     }
     console.log(arr);
-    return arr;
 }
-function getTotalCount(array) {
-    let result = 0;
-    let j = 0;
-    while (result <= 10) {
-        result += array[j];
-        j++;
+
+// let array = [];
+// for (let num = 100; num < 999; num++) {
+//     if(num.toString().split("").map((i)=>parseInt(i)).reduce((res, i)=>res + i) == 9){
+//         array.push(num);
+//     }
+// }
+// console.log(array);
+
+function checkDigitalNumber(string, array) {
+    let res = 0;
+    for (let j = 0; j < string.length; j++) {
+        res += parseInt(string[j]);
     }
-    console.log(j);
+    if (res == 9) {
+        array.push(string);
+    }
 }
-getTotalCount(getRandomArray());
+showDigitNumber();
 
-// /* 17. Fill the array with the 10th random numbers from 1 to 10 using a loop.*/
-// function createArr() {
-//     for (let i = 0; i < 10; i++) {
-//         arr[i] = numberRandom(0, 10);
-//     }
-// }
-// arr = [];
-// createArr();
-// console.log(arr);
-
-// /* 18. Multiplication table in a loop.*/
-// for (let i = 1; i <= 9; i++) {
-//     for (let j = 1; j <= 9; j++) {
-//         console.log(i + ' x ' + j + ' = ' + i * j);
-//     }
-// }
-
-// /* 19. An array with numbers is given. without using the reverse method, reverse it.*/
-// arr = [1, 2, 3, 4, 5];
-// let newArr = [];
-// for (let i = 0; i < arr.length; i++) {
-//     newArr[i] = arr[arr.length - 1 - i];
-// }
-// console.log(newArr);
-
-// /* 20. You are given a two-dimensional array with numbers, for example
-// [[1, 2, 3], [4, 5], [6]]. Find the sum of the elements of this array.*/
-// arr = [[1, 2, 3], [4, 5], [6]];
-// result = 0;
-// for (let i = 0; i < arr.length; i++) {
-//     for (let j = 0; j < arr[i].length; j++) {
-//         result += arr[i][j];
-//     }
-// }
-// console.log(result);
-
-// /* 21. Make a function getDigitsSum that takes as a parameter an integer
-// and returns the sum of its digits.*/
-// function getDigitsSum(n) {
-//     console.log(n);
-//     let str = '' + n;
-//     let res = 0;
-//     for (let i = 0; i < str.length; i++) {
-//         res += parseInt(str[i]);
-//     }
-
-//     console.log(res);
-// }
-// getDigitsSum(numberRandom(11, 1000));
-
-// /* 22. Given an array with numbers. Create a new array from it, where only positive ones
-// will remain numbers. Create a helper function isPositive () for this, which will take as
-// a parameter number and return true if the number is positive and false if it is negative.*/
-// arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// let positiveArr = arr.filter(isPositive);
-// function isPositive(item) {
-//     return item % 2 == 0;
-// }
-// console.log(positiveArr);
-
-// /* 23.Using a loop, output all three-digit numbers in which the sum of all digits is - 9
-// For example: 2 + 4 + 3 = 9*/
-// function showDigitNumber() {
-//     const arr = [];
-//     for (let i = 100; i < 999; i++) {
-//         let str = '' + i;
-//         checkDigitalNumber(str, arr);
-//     }
-//     console.log(arr);
-// }
-
-// // let array = [];
-// // for (let num = 100; num < 999; num++) {
-// //     if(num.toString().split("").map((i)=>parseInt(i)).reduce((res, i)=>res + i) == 9){
-// //         array.push(num);
-// //     }
-// // }
-// // console.log(array);
-
-// function checkDigitalNumber(string, array) {
-//     let res = 0;
-//     for (let j = 0; j < string.length; j++) {
-//         res += parseInt(string[j]);
-//     }
-//     if (res == 9) {
-//         array.push(string);
-//     }
-// }
-// showDigitNumber();
-
-// /* 24. With the help of a loop, bring users online.*/
-// function User(name, online) {
-//     (this.name = name), (this.online = online);
-// }
-// const user1 = new User('Alan', false);
-// const user2 = new User('Jeff', true);
-// const user3 = new User('Sarah', false);
-// arr = [user1, user2, user3];
-// function checkOnline(array) {
-//     return array.filter(user => user.online);
-// }
-// const onlineUsers = checkOnline(arr);
-// onlineUsers.forEach(element => console.log(element.name));
+/* 24. With the help of a loop, bring users online.*/
+function User(name, online) {
+    (this.name = name), (this.online = online);
+}
+const user1 = new User('Alan', false);
+const user2 = new User('Jeff', true);
+const user3 = new User('Sarah', false);
+arr = [user1, user2, user3];
+function checkOnline(array) {
+    return array.filter(user => user.online);
+}
+const onlineUsers = checkOnline(arr);
+onlineUsers.forEach(element => console.log(element.name));
