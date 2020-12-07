@@ -1,7 +1,7 @@
-// ● write operator if..else which takes a value from prompt and logs to the console
-// 1 if the value is greater than zero,
-// 1 if the value is less than zero,
-// 0 if the value is zero
+/* ● write operator if..else which takes a value from prompt and logs to the console
+1 if the value is greater than zero,
+1 if the value is less than zero,
+0 if the value is zero*/
 let number = parseInt(prompt ("Enter your number", " "));
 
 if (number > 0  || number < 0) {
@@ -12,11 +12,11 @@ if (number > 0  || number < 0) {
     console.log("Something went wrong");
 }
 
-// ● rewrite to ternary operator:
-// var a = 1;
-// var n;
-// if (a> 0) {n = true; }
-// else {n = false; }
+/* ● rewrite to ternary operator:
+var a = 1;
+var n;
+if (a> 0) {n = true; }
+else {n = false; }*/
 let a = 1;
 let n = (a > 0) ? true : false;
 console.log(n);
@@ -54,11 +54,11 @@ if (!(2==2) || (true && '')){
     console.log("This makes no sense");
 }
 
-// Using the switch statement, write the following conditions:
-// - if you entered 1, then output 'a' to the console
-// - if you entered 2 - "b"
-// - if you entered 3 - "c"
-// - otherwise - "z"
+/*Using the switch statement, write the following conditions:
+- if you entered 1, then output 'a' to the console
+- if you entered 2 - "b"
+- if you entered 3 - "c"
+- otherwise - "z"*/
 switch(number){
     case 1: 
         console.log("a");
@@ -82,12 +82,12 @@ console.log(i*i);
 let j = 1;
 while( j <= 9 ){
     console.log(j*j);
-    j++
+    j++;
 }
 
 // the function takes two parameters (numbers) and returns the larger of them
 function whatBigger(a, b) {
-    console.log (`first number = ${a}, second number = ${b}`)
+    console.log (`first number = ${a}, second number = ${b}`);
     return a > b ? a : b;
 }
 function getRandomInt(max) {
