@@ -1,4 +1,5 @@
-import { useState, createContext } from 'react';
+import { useState } from 'react';
+import { AppContext } from '../../context/AppContext';
 import { Page } from '../Page/Page';
 import { Card } from '../Card/Card';
 import image1 from '../../resources/images/image-1.jpg';
@@ -6,25 +7,6 @@ import image2 from '../../resources/images/image-2.jpg';
 import image3 from '../../resources/images/image-3.jpg';
 import './App.scss';
 
-const MAIN_INFORMATION = [
-    {
-        btn: 'Add new translation',
-        headText: 'User profiles',
-        text: 'Here you can overview the user profiles',
-        nameUser: 'First name',
-        lastNameUser: 'Last name',
-        ageUser: 'Age',
-        dataUser: 'About myself:',
-        moreBtn: 'Read more'
-    }
-];
-const HEADER_INFORMATION = [
-    {
-        btn: 'Add new translation',
-        headText: 'User profiles',
-        text: 'Here you can overview the user profiles'
-    }
-];
 const USERS = [
     [
         {
@@ -56,42 +38,29 @@ const USERS = [
         }
     ]
 ];
-const LINKS = [
-    [
-        { id: 1, url: '/', text: 'Home' },
-        { id: 2, url: '/office', text: 'Office' },
-        { id: 3, url: '/admin', text: 'Admin Panel' }
-    ]
-];
-
-export const AppContext = createContext(() => {});
 
 export const App = () => {
-    const [translation, setTranslation] = useState(0);
-    const [main, setMain] = useState(MAIN_INFORMATION);
-    const [header, setHeader] = useState(HEADER_INFORMATION);
-    const [users, setUsers] = useState(USERS);
-    const [links, setLinks] = useState(LINKS);
+    const [translation, setTranslation] = useState({
+        id: 0,
+        text: 'en'
+    });
+
+    // const handleUpdateInfo = () => {
+    //     array.push(obj);
+    // };
 
     return (
         <AppContext.Provider
             value={{
                 translation,
-                setTranslation,
-                main,
-                setMain,
-                header,
-                setHeader,
-                users,
-                setUsers,
-                links,
-                setLinks
+                setTranslation
+                // handleUpdateInfo
             }}
         >
             <div className="app">
                 <Page>
                     <div className="app__cards">
-                        {users[translation].map(u => (
+                        {USERS[translation.id].map(u => (
                             <Card key={u.id} data={u} />
                         ))}
                     </div>

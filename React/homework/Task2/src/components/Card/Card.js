@@ -1,14 +1,28 @@
 import { useContext } from 'react';
-import { AppContext } from '../App/App';
+import { AppContext } from '../../context/AppContext';
 import { Details } from '../Details/Details';
 import './Card.scss';
 
+const MAIN_INFORMATION = [
+    {
+        nameUser: 'First name',
+        lastNameUser: 'Last name',
+        ageUser: 'Age',
+        dataUser: 'About myself:',
+        moreBtn: 'Read more'
+    }
+];
+
 export const Card = ({ data }) => {
     const { firstName, lastName, age, imageUrl, userInfo } = data;
-    const { main, translation } = useContext(AppContext);
-    const { nameUser, lastNameUser, ageUser, dataUser, moreBtn } = main[
-        translation
-    ];
+    const { translation } = useContext(AppContext);
+    const {
+        nameUser,
+        lastNameUser,
+        ageUser,
+        dataUser,
+        moreBtn
+    } = MAIN_INFORMATION[translation.id];
     return (
         <div className="card">
             <div className="card__top">

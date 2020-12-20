@@ -1,0 +1,10 @@
+export { App } from './App/App';
+export { Card } from './Card';
+export { Details } from './Details';
+export { Footer } from './Footer';
+export { Header } from './Header';
+export { Modal } from './Modal';
+export { NavBar } from './NavBar';
+export { Page } from './Page';
+export { TranslateForm } from './TranslateForm';
+export { TranslationBtn } from './Translation';

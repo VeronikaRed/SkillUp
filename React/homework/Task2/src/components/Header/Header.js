@@ -1,29 +1,23 @@
 import { useState, useContext } from 'react';
-import { AppContext } from '../App/App';
+import { AppContext } from '../../context/AppContext';
 import { NavBar } from '../NavBar/NavBar';
 import './Header.scss';
 
-const TRANSLATIONS = [
+const HEADER_INFORMATION = [
     {
-        id: 0,
-        text: 'en'
-    },
-    {
-        id: 1,
-        text: 'ru'
-    },
-    {
-        id: 2,
-        text: 'ua'
+        btn: 'Add new translation',
+        headText: 'User profiles',
+        text: 'Here you can overview the user profiles'
     }
 ];
-export const Header = ({ onToggleEditMode }) => {
-    const [state, setState] = useState(TRANSLATIONS);
-    const { header, setTranslation } = useContext(AppContext);
-    const { headText, text, btn } = header;
+
+export const Header = ({ onToggleEditMode, translations }) => {
+    const { translation, setTranslation } = useContext(AppContext);
+    const { headText, text, btn } = HEADER_INFORMATION[translation.id];
     const handleChangeTranslationId = event => {
         setTranslation(
-            TRANSLATIONS.filter(item => item.text === event.target.value)
+            translation
+                .filter(item => item.text === event.target.value)
                 .map(item => item.id)
                 .pop()
         );
@@ -49,7 +43,7 @@ export const Header = ({ onToggleEditMode }) => {
                     </button>
 
                     <div className="header__translations">
-                        {TRANSLATIONS.map(({ id, text }) => (
+                        {translations.map(({ id, text }) => (
                             <button
                                 onClick={handleChangeTranslationId}
                                 key={id}
