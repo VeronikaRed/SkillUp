@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "dateformat": "^3.0.3",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "webpack": "^5.1.3"
   },
   "devDependencies": {
